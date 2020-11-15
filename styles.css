@@ -1,46 +1,61 @@
-/* CSS GRID */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-rows: auto  auto auto auto auto;
-    
+body {
+    margin: 0px;
 }
 
 ul {
+    list-style-type: none;
+}
+
+
+/* Main Layout */
+.container {
+    height: 100vh;
     display: grid;
-}
-/* not sure why ul has to be the container, i thought it was next down
-maybe it just needs the display: grid? idk yet */
-
-
-/* NAVBAR */
-.about {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-}
-
-.store {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 3fr 2fr 2fr 4fr 1fr;
+    grid-template-areas:
+    "content1"
+    "."
+    "content2"
+    "content3"
+    "."
+    "content4"
+    ;
 }
 
-.gmail {
-    grid-row: 1 / 2;
-    grid-column: 4 / 5;
+.content1 {
+    grid-area: content1;
 }
 
-/* Other */
-
-ul {
-    list-style: none;
+.content2 {
+    grid-area: content2;
 }
 
-ul li {
+.content3 {
+    grid-area: content3;
+}
+
+.content4 {
+    grid-area: content4;
+}
+
+div {
     border: 1px solid black;
 }
 
+/* End of Main Layout */
+
+/* Images */
+
 .icon {
-    height: 24px;
-    width: 24px;
+    max-width: 24px;
+    max-height: 24px;
 }
+
+#magnifying-glass {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+/* End of Images */
+
